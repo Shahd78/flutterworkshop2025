@@ -1,26 +1,51 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
-import 'inputpage.dart';
-void main() {
-  runApp(const BMICalculator());
+import 'package:flutter_application_1/core.dart/data.dart/books_data.dart';
+import 'package:flutter_application_1/core.dart/theme.dart/app_theme.dart';
+import 'package:flutter_application_1/screens.dart/home.dart/book_details.dart';
+import 'package:flutter_application_1/screens.dart/home.dart/category.dart';
+import 'package:flutter_application_1/screens.dart/home.dart/home_screen.dart';
+import 'package:flutter_application_1/screens.dart/home.dart/my_book.dart';
+import 'package:flutter_application_1/sidebar.dart/view.dart/sidebar_screen.dart';
+import 'package:flutter_application_1/auth.dart/view.dart/login_screen.dart';
+import 'package:flutter_application_1/auth.dart/view.dart/login_sign_screen.dart';
+import 'package:flutter_application_1/features.dart/splash.dart/view.dart/splash_screen.dart';
+
+void main(){
+  runApp( BookyApp());
 }
 
-class BMICalculator extends StatelessWidget {
-  const BMICalculator({super.key});
+class BookyApp extends StatelessWidget{
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF0A0E21),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF0A0E21),
-          elevation: 0,
-          centerTitle: true,
-        ),
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const InputPage(),
-    );
+const BookyApp({super.key});
+
+
+        @override
+          Widget build(BuildContext context) {
+          return MaterialApp(
+        title: "Booky",
+        debugShowCheckedModeBanner: false,
+              theme: AppTheme.lightTheme,
+          home:  SplashScreen(),
+
+
+   );
+
+
+
+
+
+
   }
+
+
 }
+
+
+
+
+
+
+
+
+
